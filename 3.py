@@ -57,7 +57,7 @@ for s in states:
     best_action = None
     for a in action:
         next_state, reward = P[s][a]
-        value = reward + gamma * V[s]
+        value = reward + gamma * V[next_state]
 
         if value > best_value:
             best_value = value
